@@ -45,7 +45,7 @@ class TodoControllerTest {
     @Test
     fun `todo 목록 조회 테스트`() {
         mockMvc.perform(get("/api/todos")
-            .param("page", "1")
+            .param("page", "0")
             .param("size", "10")
             .param("sort", "todoId,DESC"))
             .andDo(print())
