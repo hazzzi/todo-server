@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*
 import server.app.domain.vo.TodoVo
 import server.app.service.TodoService
 
+@CrossOrigin(origins = ["http://localhost:3000"])
 @RestController
 @RequestMapping("/api/todos")
 class TodoController @Autowired constructor(

@@ -13,7 +13,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers.print
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
-import server.app.domain.model.Todo
 import server.app.domain.vo.TodoVo
 
 @ExtendWith(SpringExtension::class)
@@ -29,8 +28,7 @@ class TodoControllerTest {
 
     @Test
     fun `todo 생성 테스트`() {
-        val todo = Todo(
-            todoId = null,
+        val todo = TodoVo(
             contents = "오늘의 할 일",
             isComplete = false
         )
